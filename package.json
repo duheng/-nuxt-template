@@ -8,14 +8,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "koa": "*",
-    "koa-bodyparser": "*",
-    "koa-router": "*",
-    "koa-static": "^5.0.0"
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^12.0.1",
+    "koa-static": "^5.0.0",
+    "sequelize": "^6.35.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
     "http-proxy-middleware": "^2.0.6",
-    "koa2-connect": "^1.0.2"
+    "koa2-connect": "^1.0.2",
+    "mysql2": "^3.6.5"
   }
 }

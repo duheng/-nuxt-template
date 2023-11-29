@@ -7,8 +7,19 @@ const koaConnect = require('koa2-connect');
 
 const path = require('path');
 const app = new Koa();
-const router = new Router();
 const env = process.env.NODE_ENV || 'development'
+const router = require('./backend/routes/index')
+
+app
+  .use(router.routes())
+  .use(router.allowedMethods())
+  .use(async (ctx, next) => {
+    if(ctx.path.startsWith('/api')) {
+      ctx.status = 403; // 设置状态码为无权限
+      ctx.body = 'You do not have permission to access this resource.';
+    }
+  })
+
 // 设置代理到 Vue3 开发服务器
 if(env == 'development') {
   app.use(
