@@ -17,7 +17,9 @@ app
     if(ctx.path.startsWith('/api')) {
       ctx.status = 403; // 设置状态码为无权限
       ctx.body = 'You do not have permission to access this resource.';
+      return
     }
+    await next()
   })
 
 // 设置代理到 Vue3 开发服务器
@@ -25,7 +27,7 @@ if(env == 'development') {
   app.use(
     koaConnect(
       createProxyMiddleware({
-        target: 'http://localhost:8010', // 其他服务器的地址
+        target: 'http://localhost:9000', // 其他服务器的地址
         changeOrigin: true,
         ws: true, // 启用 websocket 代理
         pathRewrite: {
