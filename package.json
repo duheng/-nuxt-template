@@ -1,0 +1,21 @@
+{
+  "name": "vue-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix ./front run dev & cross-env NODE_ENV=development node server.js",
+    "build": "npm --prefix ./front run build && cross-env NODE_ENV=production node server.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "koa": "*",
+    "koa-bodyparser": "*",
+    "koa-router": "*",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "http-proxy-middleware": "^2.0.6",
+    "koa2-connect": "^1.0.2"
+  }
+}
