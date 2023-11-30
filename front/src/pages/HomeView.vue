@@ -10,6 +10,7 @@ counter.incrementAsync();
 
 <template>
   <main>
+    <el-button type="primary">Primary Button</el-button>
     <div>count: {{ count }}</div>
     <div>double: {{ double }}</div>
     <TheWelcome />
