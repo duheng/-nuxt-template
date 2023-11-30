@@ -23,4 +23,6 @@ const List =  sequelize.define('list', {
   tableName: 'list'
 })
 
+
+
 module.exports = List

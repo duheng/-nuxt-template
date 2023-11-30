@@ -33,7 +33,6 @@ class ListController {
   static async createTodoList (ctx) {
     let todoList = ctx.request.body
     if (todoList) {
-      todoList.user_id = ctx.user.id
       await ListModel.createTodoList(todoList)
       ctx.body = {
         code: 1,

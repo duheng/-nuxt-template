@@ -9,7 +9,7 @@ const path = require('path');
 const app = new Koa();
 const env = process.env.NODE_ENV || 'development'
 const router = require('./backend/routes/index')
-
+app.use(bodyParser())
 app
   .use(router.routes())
   .use(router.allowedMethods())
