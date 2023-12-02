@@ -27,7 +27,7 @@ if(env == 'development') {
   app.use(
     koaConnect(
       createProxyMiddleware({
-        target: 'http://localhost:9000', // 其他服务器的地址
+        target: 'http://localhost:5174', // 其他服务器的地址
         changeOrigin: true,
         ws: true, // 启用 websocket 代理
         pathRewrite: {

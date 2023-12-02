@@ -12,7 +12,7 @@ class ListModel {
         user_id,
         status
       },
-      attributes: ['id', 'content', 'status']
+      attributes: ['user_id', 'content', 'status']
     })
     return todoList
   }

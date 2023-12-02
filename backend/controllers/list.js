@@ -9,7 +9,9 @@ class ListController {
   static async getTodoList (ctx) {
     const data = ctx.request.query
     if (data) {
-      const todoList = await ListModel.getTodoList(ctx.user.id, data.status)
+      console.log('AXXX----',data)
+      console.log('AXXX1111----',data.user_id,  data.status)
+      const todoList = await ListModel.getTodoList(data.user_id, data.status)
       ctx.body = {
         code: 1,
         bean: {
