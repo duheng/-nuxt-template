@@ -1,10 +1,6 @@
 <script setup>
-import { onMounted, provide } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
-
-import request from "./utils/request";
-provide("$axios", request);
 </script>
 
 <template>
