@@ -29,7 +29,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <el-button type="primary">Primary Button</el-button>
+    <el-button type="primary" native>Primary Button</el-button>
     <div>count: {{ count }}</div>
     <div>double: {{ double }}</div>
     <div v-for="item in state.list" :key="`${item.user_id}-${item.content}`">
@@ -39,3 +39,13 @@ onMounted(() => {
     <TheWelcome />
   </main>
 </template>
+<style>
+.cancel-button:focus {
+  /* 取消按钮被点击和获得焦点时的样式 */
+  outline: none; /* 隐藏焦点样式 */
+  box-shadow: none; /* 隐藏焦点样式 */
+  background-color: var(--el-button-bg-color);
+  border: var(--el-border);
+  border-color: var(--el-button-border-color);
+}
+</style>
