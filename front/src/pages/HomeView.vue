@@ -29,7 +29,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <el-button type="primary" native>Primary Button</el-button>
+    <el-button class="cancel-button" type="primary">Primary Button</el-button>
     <div>count: {{ count }}</div>
     <div>double: {{ double }}</div>
     <div v-for="item in state.list" :key="`${item.user_id}-${item.content}`">
@@ -47,5 +47,12 @@ onMounted(() => {
   background-color: var(--el-button-bg-color);
   border: var(--el-border);
   border-color: var(--el-button-border-color);
+}
+
+.cancel-button:hover {
+  color: var(--el-button-hover-text-color);
+  border-color: var(--el-color-primary-dark-2);
+  background-color: var(--el-color-primary-dark-2);
+  outline: 0;
 }
 </style>
